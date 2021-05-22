@@ -1,0 +1,2 @@
+except Exception:
+print("sorry! there is an error")

@@ -1,0 +1,90 @@
+#!/usr/bin/python3
+"""This is a docstrings.
+    for a new class: Rectangle.
+"""
+
+
+class Rectangle:
+    '''this is an empty class
+        that defines a Rectangle
+    '''
+
+    def __init__(self, width=0, height=0):
+        '''Method:
+        Args:
+            width: width of a Rectangle
+            height: height Of a Rectangle
+        '''
+        self.__height = height
+        self.__width = width
+
+
+    @property
+    def width(self):
+        '''Property for the width of the Rectangle
+        '''
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        '''Method:
+        Args:
+            value: width of a Rectangle
+        raises:
+            ValueError: width must be >= 0
+            TypeError: width must be an integer
+        '''
+        if self.width < 0:
+            raise ValueError ("width must be >= 0")
+        if type(self.width) is not int:
+            raise TypeError ("width must be an integer")
+        self.__width = value
+
+    @property
+    def height(self):
+        '''Property for the height of the Rectangle
+        '''
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        '''Method:
+        Args:
+            value: height of a Rectangle
+        raises:
+            ValueError: height must be >= 0
+            TypeError: height must be an integer
+        '''
+        if self.height < 0:
+            raise ValueError ("height must be >= 0")
+        if type(self.height) is not int:
+            raise TypeError ("height must be an integer")
+        self.__height = value
+
+    def area(self):
+        '''Rectangle area method.
+        Returns:
+            the rectangle area.
+        '''
+        return self.__width * self.__height
+
+    def perimeter(self):
+        '''Rectangle Perimeter method.
+        Returns:
+            the rectangle Perimeter.
+        '''
+        if self.width == 0 or self.height == 0:
+            return 0
+        else:
+            return (self.width + self.height) * 2
+
+    def __str__(self):
+        str = ""
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                str += "#"
+            if i < self.__height - 1:
+                str += "\n"
+        return (str)

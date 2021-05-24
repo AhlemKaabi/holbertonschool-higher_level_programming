@@ -1,7 +1,7 @@
 # Python - Classes
 
 [Project-based learning](https://en.wikipedia.org/wiki/Project-based_learning), to learn *Classes*:
-
+### Learning Objectives
 * What is OOP
 * “first-class everything”
 * What is a class

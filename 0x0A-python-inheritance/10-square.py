@@ -7,7 +7,7 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 class Square(Rectangle):
     """ define class square """
-    
+
     def __str__(self):
         super().__str__(self)
 

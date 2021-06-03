@@ -1,9 +1,11 @@
 #!usr/bin/python3
-'''module
+'''module documentation
 '''
 
 
 class Student:
+    '''class Student
+    '''
 
     def __init__(self, first_name, last_name, age):
         '''class

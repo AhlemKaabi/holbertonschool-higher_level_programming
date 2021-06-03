@@ -6,5 +6,5 @@ import json
 def get_args(*args):
     args_list = []
     for arg in args:
-        save_to_json_file(args_list.append(arg), 'add_item')
-    load_from_json_file('add_item')
+        save_to_json_file(args_list.append(arg), 'add_item.json')
+    load_from_json_file('add_item.json')

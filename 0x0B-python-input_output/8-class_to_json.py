@@ -8,4 +8,4 @@ import json
 def class_to_json(obj):
     '''class to json method
     '''
-    return json.dumps(obj.__dict__)
+    return obj.__dict__

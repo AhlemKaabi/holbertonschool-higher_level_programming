@@ -1,6 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 '''Save to a Json file
 '''
+
+
 import json
 
 

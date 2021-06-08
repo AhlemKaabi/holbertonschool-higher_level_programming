@@ -9,7 +9,6 @@ class Square(Rectangle):
     '''class that create a Squrare'''
     def __init__(self, size, x=0, y=0, id=None):
         '''class constructor'''
-        self.size = size
         super().__init__(size, size, x, y, id)
         # pass same number of attributes to the super class
 

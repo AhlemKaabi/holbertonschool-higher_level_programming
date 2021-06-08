@@ -52,6 +52,16 @@ class Square(Rectangle):
                 if key == "y":
                     self.y = value
 
+    def __str__(self):
+        '''Returns:
+                [Square] (<id>) <x>/<y> - <size>
+        '''
+        return "[{}] ({}) {}/{} - {}".format(self.__class__.__name__,
+                                                 self.id,
+                                                 self.x,
+                                                 self.y,
+                                                 self.size)
+
     def to_dictionary(self):
         '''Returns:
             the dictionary representation of a Square

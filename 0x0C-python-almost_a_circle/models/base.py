@@ -2,7 +2,9 @@
 '''module for base class
 '''
 
+
 import json
+
 
 class Base:
     '''Manage id attribute in all future classes
@@ -21,7 +23,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         '''convert to a json string'''
-        if list_dictionaries == None:
+        if list_dictionaries is None:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
@@ -38,16 +40,13 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         '''convert from json string'''
-        if json_string == None:
+        if json_string is None:
             return []
         else:
             return json.loads(json_string)
-
-    #@classmethod
-    #def create(cls, **dictionary):
-    #    for key, value in dictionary.items():
-    #        cls.value =
-
-
-    #@classmethod
-    #def load_from_file(cls):
+    # @classmethod
+    # def create(cls, **dictionary):
+    #   for key, value in dictionary.items():
+    #       cls.value =
+    # @classmethod
+    # def load_from_file(cls):

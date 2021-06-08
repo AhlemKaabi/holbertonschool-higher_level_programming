@@ -2,7 +2,9 @@
 '''Module for the class Rectangle
 '''
 
+
 from models.base import Base
+
 
 class Rectangle(Base):
     '''class that create a Rectangle'''
@@ -42,8 +44,6 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
-
-
 
     @height.setter
     def height(self, value):
@@ -85,16 +85,25 @@ class Rectangle(Base):
             for _ in range(self.width):
                 print("#", end="")
             print()
-    #print("#" for _ in range(self.__height) for _ in range(self.__width))
+    # print("#" for _ in range(self.__height) for _ in range(self.__width))
 
     def __str__(self):
         '''Returns:
                 [Rectangle] (<id>) <x>/<y> - <width>/<height>
         '''
         if self.__class__.__name__ == "Square":
-            return "[{}] ({}) {}/{} - {}".format(self.__class__.__name__, self.id, self.x, self.y, self.size)
+            return "[{}] ({}) {}/{} - {}".format(self.__class__.__name__,
+                                                 self.id,
+                                                 self.x,
+                                                 self.y,
+                                                 self.size)
         else:
-            return "[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__, self.id, self.x, self.y, self.width, self.height)
+            return "[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
+                                                    self.id,
+                                                    self.x,
+                                                    self.y,
+                                                    self.width,
+                                                    self.height)
 
     def display(self):
         '''print a Rectangle instance with char #'''
@@ -107,7 +116,7 @@ class Rectangle(Base):
         '''update attributes value'''
         if args:
             for idx, value in enumerate(args):
-                if  idx == 0:
+                if idx == 0:
                     self.id = value
                 elif idx == 1:
                     self.width = value

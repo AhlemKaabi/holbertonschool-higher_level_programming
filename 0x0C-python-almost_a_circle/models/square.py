@@ -4,13 +4,14 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     '''class that create a Squrare'''
     def __init__(self, size, x=0, y=0, id=None):
         '''class constructor'''
         self.size = size
         super().__init__(size, size, x, y, id)
-        #pass same number of attributes to the super class
+        # pass same number of attributes to the super class
 
     @property
     def size(self):
@@ -25,7 +26,7 @@ class Square(Rectangle):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__size = value
-    #why The setter should assign (in this order) the width and the height
+    # why The setter should assign (in this order) the width and the height
     # - with the same value --> task 11
 
     def update(self, *args, **kwargs):
@@ -62,5 +63,3 @@ class Square(Rectangle):
                       "y": self.y
                       })
         return dict_
-
-

@@ -9,14 +9,13 @@ class Square(Rectangle):
     '''class that create a Squrare'''
     def __init__(self, size, x=0, y=0, id=None):
         '''class constructor'''
-        self.size = size
         super().__init__(size, size, x, y, id)
         # pass same number of attributes to the super class
 
     @property
     def size(self):
         '''get the size of the square'''
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -25,7 +24,8 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
-        self.__size = value
+        self.width = value
+
     # why The setter should assign (in this order) the width and the height
     # - with the same value --> task 11
 

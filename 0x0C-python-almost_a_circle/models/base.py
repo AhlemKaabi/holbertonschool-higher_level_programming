@@ -31,6 +31,8 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         '''save to json file'''
+        if list_objs is None:
+            list_objs = []
         l = []
         for obj in list_objs:
             l.append(cls.to_dictionary(obj))
@@ -44,9 +46,11 @@ class Base:
             return []
         else:
             return json.loads(json_string)
-    # @classmethod
-    # def create(cls, **dictionary):
-    #   for key, value in dictionary.items():
-    #       cls.value =
+
+    @classmethod
+    def create(cls, **dictionary):
+
+        cls.update(dictionary)
+
     # @classmethod
     # def load_from_file(cls):

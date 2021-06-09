@@ -49,8 +49,13 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-
-        cls.update(dictionary)
-
+        '''create insctance'''
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 2)
+            dummy.update(**dictionary)
+        if cls.__name__ == "Square":
+            dummy = cls(1)
+            dummy.update(**dictionary)
+        return dummy
     # @classmethod
     # def load_from_file(cls):

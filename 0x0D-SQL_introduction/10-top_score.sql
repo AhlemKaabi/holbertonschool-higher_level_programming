@@ -6,4 +6,4 @@
 --  3   Alex
 SELECT name, score
 FROM second_table
-ORDER BY score ASC | DESC;
+ORDER BY score ASC;

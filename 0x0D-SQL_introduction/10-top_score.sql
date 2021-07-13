@@ -4,6 +4,6 @@
 --  10  John
 --  8   George
 --  3   Alex
-SELECT name, score
+SELECT score, name
 FROM second_table
 ORDER BY score DESC;

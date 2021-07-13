@@ -4,4 +4,4 @@
 --   Records should be listed by descending score
 --   The database name will be passed as an argument to the mysql command
 SELECT score, name FROM second_table
-ORDER BY score DESC
+ORDER BY score DESC;

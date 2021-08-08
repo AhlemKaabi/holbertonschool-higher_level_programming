@@ -22,7 +22,7 @@ if __name__ == '__main__':
     mySession = Session()
     # print(Session1.query(model_state.state).order_by(model_state.state.id).all())
     for st_obj in mySession.query(model_state.State).\
-                order_by(model_state.State.id).all():
+            order_by(model_state.State.id).all():
         print("{}: {}".format(st_obj.id, st_obj.name))
 
     mySession.close()

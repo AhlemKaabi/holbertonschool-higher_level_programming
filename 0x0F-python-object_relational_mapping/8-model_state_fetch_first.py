@@ -4,10 +4,11 @@
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-import model_state
-from model_state import Base, State
 import sys
+
 if __name__ == '__main__':
+    import model_state
+    from model_state import Base, State
     # connect to the DB
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'.

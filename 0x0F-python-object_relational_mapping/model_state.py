@@ -10,7 +10,7 @@ Base = declarative_base()
 # defined Table objects are collected.
 
 
-class state(Base):
+class State(Base):
     """ class define the states table
     """
     # linked to the states table

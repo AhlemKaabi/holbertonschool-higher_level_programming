@@ -6,6 +6,8 @@ from sqlalchemy import Column, String, Integer
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
+# base class contains a MetaData object where newly
+# defined Table objects are collected.
 
 
 class state(Base):

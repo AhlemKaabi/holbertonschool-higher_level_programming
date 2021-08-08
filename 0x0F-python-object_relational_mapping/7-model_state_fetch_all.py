@@ -3,7 +3,7 @@
     database hbtn_0e_6_usa
 """
 from sqlalchemy import create_engine
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import sessionmaker
 import model_state
 from model_state import Base
 import sys
@@ -17,9 +17,9 @@ if __name__ == '__main__':
     # talk to the DB: usning sessions
 
     # create a configured "Session" class
-    mySession = Session(bind=engine)
+    Session = sessionmaker(bind=engine)
     # create a Session
-    # mySession = Session()
+    mySession = Session()
     # print(Session1.query(model_state.state).order_by(model_state.state.id).all())
     for st_obj in mySession.query(model_state.State).\
             order_by(model_state.State.id).all():

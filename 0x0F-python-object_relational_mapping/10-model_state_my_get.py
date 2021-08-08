@@ -28,7 +28,6 @@ if __name__ == '__main__':
         filter(model_state.State.name == txtUser).all()
     if mySessionQuery:
         for instance in mySessionQuery:
-            print(instance)
             print(instance.id)
     else:
         print("Not found")

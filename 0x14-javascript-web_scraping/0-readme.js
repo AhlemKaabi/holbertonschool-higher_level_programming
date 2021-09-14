@@ -1,6 +1,4 @@
 #!/usr/bin/node
-
-// take the file path as argument
 if (process.argv.length === 3) {
   const fs = require('fs');
 

@@ -1,6 +1,8 @@
-const header = document.querySelector('header');
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('header');
 
-function color () {
-	header.style.color = '#FF0000';
-}
-color();
+  function color () {
+    header.style.color = '#FF0000';
+  }
+  color();
+});
